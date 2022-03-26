@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../scr/css/mini-game.css" />
+    <link rel="stylesheet" href="../../scr/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="../../scr/img/logo.ico" type="image/x-icon" />
+
+    <title>Suit game</title>
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/scr/img/logo.ico" alt="logo" width="30" height="24" class="d-inline-block align-text-top" />
+          BWX1Y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../index.html/#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html/#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html/#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://nedynugroho.carrd.co/">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ahir nav -->
+    <div id="app">
+      <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-3 border-end border-2 border-dark">
+              <p>Menang  <h2 id="Mn">0</h2></p>
+            </div>
+            <div class="col-3 border-end border-2 border-dark">
+              <p>Seri  <h2 id="Sr">0</h2></p>
+            </div>
+            <div class="col-3">
+              <p>Kalah  <h2 id="Kl">0</h2></p>
+            </div>
+          </div>
+      </div>
+      <br />
+      <div class="summary border border-3 border-dark text-center align-self-center">
+        <h1>MATCH RESULT</h1>
+        <br />
+        <h2 id="inGame"></h2>
+        <h4 id="result"></h4>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-3 border border-2 border-dark text-center animation" style="font-size: 40px" onclick="pickOption('🖐')">🖐</div>
+          <div class="col-1"></div>
+          <div class="col-3 border border-2 border-dark text-center animation" style="font-size: 40px" onclick="pickOption('✌')">✌</div>
+          <div class="col-1"></div>
+          <div class="col-3 border border-2 border-dark text-center animation" style="font-size: 40px" onclick="pickOption('✊')">✊</div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <br> <br>
+    <footer class="text-center text-black pb-2">
+      <p>Create with love by <a href="http://instagram.com/nedy_888/" class="text-black fw-bold">BWX1Y</a></p>
+    </footer>
+    <!-- ahir foter -->
+  </body>
+  <!-- untuk script -->
+  <script src="../../scr/js/sweetalert2.all.min.js"></script>
+  <script src="../../scr/js/mini-game.js"></script>
+  <script src="../../scr/js/bootstrap.bundle.min.js"></script>
+  <!-- ahir script -->
+</html>
