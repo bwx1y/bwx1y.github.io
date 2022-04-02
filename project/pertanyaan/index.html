@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../scr/css/bootstrap.min.css" />
     <style>
       .game{
-        padding-top: 10rem;
+        padding-top: 9rem;
       }
     </style>
 
@@ -103,6 +103,7 @@
           .then((response) => {
             BtnLoading.classList.toggle("d-none");
             BtnKirim.classList.toggle("d-none");
+            form.reset()
             console.log("Success!");
             Toast.fire({
               icon: "success",
@@ -112,6 +113,7 @@
           .catch((error) => {
             BtnLoading.classList.toggle("d-none");
             BtnKirim.classList.toggle("d-none");
+            form.reset()
             console.error("Error!", error.message);
             Toast.fire({
               icon: "error",
