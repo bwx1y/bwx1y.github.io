@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="../../scr/css/bootstrap.min.css" />
+    <style>
+      .game{
+        padding-top: 10rem;
+      }
+    </style>
+
+    <title>Gabut</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/scr/img/logo.ico" alt="logo" width="30" height="24" class="d-inline-block align-text-top" />
+          BWX1Y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../index.html#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://nedynugroho.carrd.co/">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- pertanyaan -->
+    <form name="submit-to-google-sheet">
+      <section>
+        <div class="container game">
+          <div class="row justify-content-center">
+            <div class="col-10">
+              <div class="card border-2 border-dark">
+                <div class="card-body">
+                  <h4 class="card-title text-center">Hi, My Name Nedy</h4>
+                  <br />
+                  <div class="card-text">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Pesan Anda :</label>
+                      <textarea class="form-control border border-1 border-dark" id="exampleFormControlTextarea1" rows="3" name="Pesan"></textarea>
+                    </div>
+                    <br />
+                    <input type="submit" value="Kirim" class="btn btn-outline-primary kirim" />
+                    <button class="btn btn-outline-primary d-none Loding" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      <span class="visually-hidden">Loading...</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <!-- script -->
+    <script src="../../scr/js/sweetalert2.all.min.js"></script>
+    <script src="../../scr/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx9nkVKGFgPjUhUKMdmxUxBWEMCRzoYjw-mNWR7nFIWoRBHoQkdT3zWpcZRhXm2Pm3k/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const BtnKirim = document.querySelector(".kirim");
+      const BtnLoading = document.querySelector(".Loding");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // tampilka tombol
+        BtnLoading.classList.toggle("d-none");
+        BtnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            BtnLoading.classList.toggle("d-none");
+            BtnKirim.classList.toggle("d-none");
+            console.log("Success!");
+            Toast.fire({
+              icon: "success",
+              title: "Your message has been sent",
+            });
+          })
+          .catch((error) => {
+            BtnLoading.classList.toggle("d-none");
+            BtnKirim.classList.toggle("d-none");
+            console.error("Error!", error.message);
+            Toast.fire({
+              icon: "error",
+              title: "There's a problem trying again",
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
