@@ -7,3 +7,7 @@ function instagram() {
 function facebook() {
   window.location.assign("https://www.facebook.com/nedy.nugroho.1");
 }
+$(".nav-link").on("click", function () {
+  $(".nav-link").removeClass("active");
+  $(this).addClass('active')
+});

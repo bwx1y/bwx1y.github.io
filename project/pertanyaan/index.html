@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- icon -->
-    <link rel="shortcut icon" href="/scr/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/scr/img/favicon.ico" type="image/x-icon" />
 
     <!-- jqury -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scr/js/api/jQuery.js"></script>
 
     <!-- style -->
     <link rel="stylesheet" href="/scr/css/bootstrap.min.css" />
@@ -61,7 +61,7 @@
                   <br />
                   <div class="card-text">
                     <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Pesan Anda :</label>
+                      <label for="exampleFormControlTextarea1" class="form-label">your message :</label>
                       <textarea class="form-control border border-1 border-dark" id="exampleFormControlTextarea1" rows="3" name="Pesan"></textarea>
                     </div>
                     <input type="text" name="Nama" id="nama" value="" class="d-none" placeholder="Janga di rubah" />
@@ -89,60 +89,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbx9nkVKGFgPjUhUKMdmxUxBWEMCRzoYjw-mNWR7nFIWoRBHoQkdT3zWpcZRhXm2Pm3k/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const BtnKirim = document.querySelector(".kirim");
-      const BtnLoading = document.querySelector(".Loding");
-      const Nama = document.querySelector("#nama");
-      const Ip = document.querySelector("#ip");
-      const user = document.querySelector("#User");
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener("mouseenter", Swal.stopTimer);
-          toast.addEventListener("mouseleave", Swal.resumeTimer);
-        },
-      });
-
-      $.getJSON("https://api.ipify.org?format=json", function (data) {
-        // console.log(data.ip);
-        ip.value = data.ip
-      });
-
-      form.addEventListener("submit", (e) => {
-        nama.value = navigator.userAgent;
-
-        e.preventDefault();
-        // tampilka tombol
-        BtnLoading.classList.toggle("d-none");
-        BtnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            BtnLoading.classList.toggle("d-none");
-            BtnKirim.classList.toggle("d-none");
-            form.reset();
-            console.log("Success!");
-            Toast.fire({
-              icon: "success",
-              title: "Your message has been sent",
-            });
-          })
-          .catch((error) => {
-            BtnLoading.classList.toggle("d-none");
-            BtnKirim.classList.toggle("d-none");
-            form.reset();
-            console.error("Error!", error.message);
-            Toast.fire({
-              icon: "error",
-              title: "There's a problem trying again",
-            });
-          });
-      });
-    </script>
+    <script src="/scr/js/petanyaan.js"></script>
   </body>
 </html>

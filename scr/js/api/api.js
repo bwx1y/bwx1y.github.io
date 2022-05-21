@@ -11,7 +11,7 @@ function apiDb() {
 function profile() {
   $.getJSON("https://api.github.com/users/bwx1y", function (data) {
     // console.log(data);
-    gsap.to(".jumbotron h1", { duration: 1.5, text: data.name, delay: 1.1 });
-    gsap.to(".jumbotron p", {duration: 1.5, text: data.bio ,delay: 1.3});
+    gsap.to(".jumbotron h1", { duration: 1.5, text: data.name, delay: 1 });
+    gsap.to(".jumbotron p", { duration: 1.5, text: data.bio, delay: 1.1 });
   });
 }
