@@ -1,0 +1,20 @@
+{
+  "Profile": {
+    "aboutMe1": "Saya adalah orang bodoh yang selalu belajar. Tapi mengapa saya selalu bodoh dalam melakukan hal-hal yang mudah. Terkadang gua berfikir 'Apakah gua bermanfaat ?'.<br>Dont judge a book by its cover",
+    "aboutMe2": "I am a fool who is always learning. But why am I always stupid in doing easy things. Sometimes caves think 'Are caves useful?'."
+  },
+  "Project": [
+    {
+      "title": "Suit Game",
+      "info": "Game suit for you",
+      "img": "/scr/img/project-1.png",
+      "link": "/project/mini-games/"
+    },
+    {
+      "title": "Pesan",
+      "info": "A message for me or something else",
+      "img": "/scr/img/project-2.png",
+      "link": "/project/pertanyaan/"
+    }
+  ]
+}
