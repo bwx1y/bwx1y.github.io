@@ -3,7 +3,6 @@ const form = document.forms["submit-to-google-sheet"];
 const BtnKirim = document.querySelector(".kirim");
 const BtnLoading = document.querySelector(".Loding");
 const Nama = document.querySelector("#nama");
-const Ip = document.querySelector("#ip");
 const user = document.querySelector("#User");
 const Toast = Swal.mixin({
   toast: true,
@@ -19,7 +18,7 @@ const Toast = Swal.mixin({
 
 $.getJSON("https://api.ipify.org?format=json", function (data) {
   // console.log(data.ip);
-  ip.value = data.ip;
+  $("#ip").val(data.ip);
 });
 
 form.addEventListener("submit", (e) => {
