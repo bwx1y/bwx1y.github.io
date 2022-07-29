@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/scr/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="/scr/img/favicon.ico" type="image/x-icon" />
+    <title>Game MTK</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/scr/img/favicon.ico" alt="logo" width="30" height="24" class="d-inline-block align-text-top" />
+            BWX1Y
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#project">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://nedynugroho.carrd.co/">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- pertanyaan -->
+    <div class="container">
+      <div class="row d-flex vh-100 justify-content-center align-items-center text-center">
+        <div class="border border-3 border-dark justify-content-center align-items-center d-flex" style="width: 25rem; height: 25rem">
+          <div>
+            <h3 class="mb-5">
+              <span id="soal1"></span>
+              <span id="operator"></span>
+              <span id="soal2"></span>
+            </h3>
+            <div class="input-group">
+              <input type="number" name="jawaban" id="jawaban" placeholder="Jawaban" class="form-control" />
+              <button class="btn btn-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scr/js/MTK-Game.js"></script>
+    <script src="/scr/js/bootstrap.bundle.min.js"></script>
+    <script src="/scr/js/sweetalert2.all.min.js"></script>
+  </body>
+</html>
