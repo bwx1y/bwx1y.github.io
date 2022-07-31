@@ -16,7 +16,7 @@
         $.getJSON("https://script.google.com/macros/s/AKfycbxMutBbH2I_Q0kQEibn7R9Lq7vicBWSRcZ1qyuBMucga6g9s3NSl2WEtw-O7Kjt2G8X/exec?action=getData", function (data) {
           // console.log(data)
           $.each(data, function (i, data) {
-              console.log(data)
+              // console.log(data)
             $("#Hasil").append('<div class="col-md-4"><div class="card border-dark text-center mb-2"><div class="card-header"><h3>?</h3></div><div class=" card-body"><p class="card-text">' + data.pesan + "</p></div></div></div>");
           });
         });
