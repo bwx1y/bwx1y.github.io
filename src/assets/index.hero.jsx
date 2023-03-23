@@ -39,7 +39,7 @@ const Hero = () => {
           <h2>
             And I'm a <span className="text-primary" ref={el} />
           </h2>
-          <p className="my-4">Dolor magnam animi ipsum fugit voluptates nisi odio esse veniam Explicabo velit</p>
+          <p className="my-4">I am a person who is always learning. But why do I always look <span className="fw-bold">stupid.</span></p>
           <p className="icons">
             <a className="mx-3" href={data.MyLink.github}>
               <BsGithub size={40} />
