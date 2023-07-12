@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MyNavbar from "./assets/index.navbar";
 import Hero from "./assets/index.hero";
 import Skills from "./assets/index.skils";
@@ -12,13 +12,13 @@ const App = () => {
     <>
       <MyNavbar />
       {/** content */}
-      <section id="home" className="bg-dark">
+      <section id="home">
         <Hero />
       </section>
-      <section id="skills" className="bg-secondary">
+      <section id="skills" className="py-5 bg-secondary">
         <Skills />
       </section>
-      <section id="project" className="bg-dark">
+      <section id="project">
         <Project />
       </section>
       <footer className="bg-secondary text-center text-lg-start">
