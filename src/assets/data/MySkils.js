@@ -1,6 +1,6 @@
-import HTML from "../img/html.png"
-import CSS from "../img/css-3.png"
-import Javascript from "../img/js.png"
+import HTML from "../img/html.png";
+import CSS from "../img/css-3.png";
+import Javascript from "../img/js.png";
 
 const skils = [
   {
@@ -16,7 +16,7 @@ const skils = [
   {
     icon: Javascript,
     title: "Javascript",
-    about: "",
+    about: "aku sering menggunakan bahasa ini dan web ini pun menguunankan bahasa ini dengan react untuk compiler.",
   },
 ];
 

@@ -14,7 +14,7 @@ const Hero = () => {
     AOS.init({ duration: 2000 });
     AOS.refresh();
     const typed = new Typed(el.current, {
-      strings: ["Student.", "Progaming."],
+      strings: ["Student.", "Progammer."],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,
@@ -39,7 +39,9 @@ const Hero = () => {
           <h2>
             And I'm a <span className="text-primary" ref={el} />
           </h2>
-          <p className="my-4">I am a person who is always learning. But why do I always look <span className="fw-bold">stupid.</span></p>
+          <p className="my-4">
+            I am a person who is always learning. But why do I always look <span className="fw-bold">stupid.</span>
+          </p>
           <p className="icons">
             <a className="mx-3" href={data.MyLink.github}>
               <BsGithub size={40} />
